@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurea Cervus – Luksusowe mięso sarny</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Georgia", serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:#eaeaea;
+}
+
+header{
+    background:linear-gradient(180deg,#000,#111);
+    padding:40px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #333;
+}
+
+.logo{
+    font-size:28px;
+    letter-spacing:3px;
+    color:#d4af37;
+}
+
+nav a{
+    color:#ccc;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.hero{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.8)),
+    url("https://images.unsplash.com/photo-1544025162-d76694265947");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:60px;
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:20px;
+    color:#ddd;
+}
+
+.btn{
+    margin-top:30px;
+    padding:14px 40px;
+    border:1px solid #d4af37;
+    color:#d4af37;
+    text-decoration:none;
+    font-size:16px;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:36px;
+    color:#d4af37;
+    margin-bottom:60px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:40px;
+}
+
+.card{
+    background:#141414;
+    padding:30px;
+    border:1px solid #2b2b2b;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
+}
+
+.card h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.price{
+    margin-top:15px;
+    font-size:20px;
+    color:#fff;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border:1px solid #333;
+}
+
+footer{
+    background:#000;
+    padding:40px;
+    text-align:center;
+    color:#777;
+    border-top:1px solid #333;
+}
+
+@media(max-width:900px){
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">AUREA CERVUS</div>
+<nav>
+<a href="#">Strona główna</a>
+<a href="#">Produkty</a>
+<a href="#">Historia</a>
+<a href="#">Kontakt</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Luksusowe Mięso Sarny</h1>
+<p>
+Nasze sarny kąpią się w najdroższych olejach mineralnych świata, 
+co nadaje mięsu niezwykłą delikatność, aromat i wyjątkową strukturę.
+To produkt dla najbardziej wymagających smakoszy.
+</p>
+<a class="btn" href="#">Zobacz kolekcję</a>
+</section>
+
+<section>
+<h2 class="section-title">Ekskluzywne produkty</h2>
+
+<div class="products">
+
+<div class="card">
+<h3>Polędwica Królewska</h3>
+<p>Najdelikatniejszy kawałek sarniny o niezwykle czystym aromacie.</p>
+<div class="price">1890 zł / kg</div>
+</div>
+
+<div class="card">
+<h3>Stek Imperialny</h3>
+<p>Dojrzewający stek premium dla restauracji i koneserów.</p>
+<div class="price">1640 zł / kg</div>
+</div>
+
+<div class="card">
+<h3>Filet Aurea</h3>
+<p>Mięso o subtelnym aromacie dzięki kąpielom w olejach mineralnych.</p>
+<div class="price">2100 zł / kg</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Nasza historia</h2>
+
+<div class="about">
+<img src="https://images.unsplash.com/photo-1511208687438-2c5a6d7d7c4c">
+
+<p>
+Aurea Cervus to luksusowa manufaktura specjalizująca się w produkcji
+najdroższej sarniny w Europie. Nasze sarny żyją w wyjątkowych warunkach,
+a ich dieta oraz kąpiele w starannie wyselekcjonowanych olejach mineralnych
+nadają mięsu charakterystyczny smak i niespotykaną delikatność.
+
+Proces hodowli trwa latami i wymaga ogromnej precyzji,
+dlatego nasza produkcja jest bardzo limitowana.
+</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Aurea Cervus – Ekskluzywna sarnina klasy premium
+</footer>
+
+</body>
+</html>
