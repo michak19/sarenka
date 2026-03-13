@@ -3,231 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurea Cervus – Luksusowe mięso sarny</title>
+<title>Aurea Bricks – Luksusowe klocki w kształcie mięsa</title>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: "Georgia", serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
 }
 
 body{
-    background:#0f0f0f;
-    color:#eaeaea;
+background:#0f0f0f;
+color:#eaeaea;
 }
 
 header{
-    background:linear-gradient(180deg,#000,#111);
-    padding:40px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #333;
+background:linear-gradient(180deg,#000,#111);
+padding:40px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #333;
 }
 
 .logo{
-    font-size:28px;
-    letter-spacing:3px;
-    color:#d4af37;
+font-size:28px;
+letter-spacing:3px;
+color:#d4af37;
 }
 
 nav a{
-    color:#ccc;
-    text-decoration:none;
-    margin-left:30px;
-    font-size:16px;
-    transition:0.3s;
+color:#ccc;
+text-decoration:none;
+margin-left:30px;
+transition:0.3s;
 }
 
 nav a:hover{
-    color:#d4af37;
+color:#d4af37;
 }
 
 .hero{
-    height:80vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.8)),
-    url("https://images.unsplash.com/photo-1544025162-d76694265947");
-    background-size:cover;
-    background-position:center;
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url("https://images.unsplash.com/photo-1608889175123-8ee362201f81");
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
-    font-size:60px;
-    color:#d4af37;
-    margin-bottom:20px;
+font-size:60px;
+color:#d4af37;
+margin-bottom:20px;
 }
 
 .hero p{
-    max-width:700px;
-    font-size:20px;
-    color:#ddd;
+max-width:700px;
+font-size:20px;
+color:#ddd;
 }
 
 .btn{
-    margin-top:30px;
-    padding:14px 40px;
-    border:1px solid #d4af37;
-    color:#d4af37;
-    text-decoration:none;
-    font-size:16px;
-    letter-spacing:2px;
-    transition:0.3s;
+margin-top:30px;
+padding:14px 40px;
+border:1px solid #d4af37;
+color:#d4af37;
+text-decoration:none;
+letter-spacing:2px;
+transition:0.3s;
 }
 
 .btn:hover{
-    background:#d4af37;
-    color:#000;
+background:#d4af37;
+color:#000;
 }
 
 section{
-    padding:100px 10%;
+padding:100px 10%;
 }
 
 .section-title{
-    text-align:center;
-    font-size:36px;
-    color:#d4af37;
-    margin-bottom:60px;
+text-align:center;
+font-size:36px;
+color:#d4af37;
+margin-bottom:60px;
 }
 
 .products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
 }
 
 .card{
-    background:#141414;
-    padding:30px;
-    border:1px solid #2b2b2b;
-    transition:0.3s;
+background:#141414;
+padding:30px;
+border:1px solid #2b2b2b;
+transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    border-color:#d4af37;
+transform:translateY(-8px);
+border-color:#d4af37;
+}
+
+.card img{
+width:100%;
+margin-bottom:15px;
 }
 
 .card h3{
-    color:#d4af37;
-    margin-bottom:10px;
+color:#d4af37;
 }
 
 .price{
-    margin-top:15px;
-    font-size:20px;
-    color:#fff;
+margin-top:10px;
+font-size:20px;
 }
 
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.showcase{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
 
-.about img{
-    width:100%;
-    border:1px solid #333;
+.showcase img{
+width:100%;
+border:1px solid #333;
+}
+
+.contact{
+text-align:center;
+max-width:700px;
+margin:auto;
+}
+
+.contact p{
+margin:10px 0;
+font-size:18px;
 }
 
 footer{
-    background:#000;
-    padding:40px;
-    text-align:center;
-    color:#777;
-    border-top:1px solid #333;
+background:#000;
+padding:40px;
+text-align:center;
+color:#777;
+border-top:1px solid #333;
 }
 
 @media(max-width:900px){
-    .about{
-        grid-template-columns:1fr;
-    }
 
-    .hero h1{
-        font-size:42px;
-    }
+.showcase{
+grid-template-columns:1fr;
 }
+
+.hero h1{
+font-size:42px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">AUREA CERVUS</div>
+
+<div class="logo">AUREA BRICKS</div>
+
 <nav>
 <a href="#">Strona główna</a>
 <a href="#">Produkty</a>
-<a href="#">Historia</a>
-<a href="#">Kontakt</a>
+<a href="#">O nas</a>
+<a href="#kontakt">Kontakt</a>
 </nav>
+
 </header>
 
+
 <section class="hero">
-<h1>Luksusowe Mięso Sarny</h1>
+
+<h1>Luksusowe klocki w kształcie mięsa</h1>
+
 <p>
-Nasze sarny kąpią się w najdroższych olejach mineralnych świata, 
-co nadaje mięsu niezwykłą delikatność, aromat i wyjątkową strukturę.
-To produkt dla najbardziej wymagających smakoszy.
+Ekskluzywna kolekcja klocków inspirowanych najbardziej wyrafinowanymi
+kawałkami mięsa. Idealne dla kolekcjonerów, artystów i ludzi
+z bardzo specyficznym poczuciem humoru.
 </p>
-<a class="btn" href="#">Zobacz kolekcję</a>
+
+<a class="btn">Zobacz kolekcję</a>
+
 </section>
 
+
 <section>
-<h2 class="section-title">Ekskluzywne produkty</h2>
+
+<h2 class="section-title">Nasze produkty</h2>
 
 <div class="products">
 
 <div class="card">
-<h3>Polędwica Królewska</h3>
-<p>Najdelikatniejszy kawałek sarniny o niezwykle czystym aromacie.</p>
-<div class="price">1890 zł / kg</div>
+<img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1">
+<h3>Klocek Polędwica</h3>
+<p>Precyzyjny klocek inspirowany luksusową polędwicą.</p>
+<div class="price">349 zł</div>
 </div>
 
 <div class="card">
-<h3>Stek Imperialny</h3>
-<p>Dojrzewający stek premium dla restauracji i koneserów.</p>
-<div class="price">1640 zł / kg</div>
+<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+<h3>Klocek Stek</h3>
+<p>Ultrapremium element kolekcjonerski.</p>
+<div class="price">399 zł</div>
 </div>
 
 <div class="card">
-<h3>Filet Aurea</h3>
-<p>Mięso o subtelnym aromacie dzięki kąpielom w olejach mineralnych.</p>
-<div class="price">2100 zł / kg</div>
+<img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141">
+<h3>Klocek Filet</h3>
+<p>Minimalistyczny design i perfekcyjne dopasowanie.</p>
+<div class="price">429 zł</div>
 </div>
 
 </div>
+
 </section>
+
 
 <section>
-<h2 class="section-title">Nasza historia</h2>
 
-<div class="about">
-<img src="https://images.unsplash.com/photo-1511208687438-2c5a6d7d7c4c">
+<h2 class="section-title">Zadowoleni klienci</h2>
+
+<div class="showcase">
+
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
 
 <p>
-Aurea Cervus to luksusowa manufaktura specjalizująca się w produkcji
-najdroższej sarniny w Europie. Nasze sarny żyją w wyjątkowych warunkach,
-a ich dieta oraz kąpiele w starannie wyselekcjonowanych olejach mineralnych
-nadają mięsu charakterystyczny smak i niespotykaną delikatność.
+Nasze klocki zdobyły serca kolekcjonerów na całym świecie.
+Na zdjęciu jeden z naszych klientów prezentuje
+limitowany klocek „Stek Imperium”.
 
-Proces hodowli trwa latami i wymaga ogromnej precyzji,
-dlatego nasza produkcja jest bardzo limitowana.
+Produkty Aurea Bricks łączą luksus, humor i perfekcyjne wykonanie.
+Każdy element jest zaprojektowany tak, aby wyglądał jak
+najbardziej ekskluzywny kawałek mięsa… ale był w rzeczywistości klockiem.
 </p>
+
 </div>
 
 </section>
 
+
+<section id="kontakt">
+
+<h2 class="section-title">Kontakt</h2>
+
+<div class="contact">
+
+<p>📧 Email: kontakt@aureabricks.pl</p>
+<p>📞 Telefon: +48 123 456 789</p>
+<p>📍 Adres: ul. Klockowa 7, 00-001 Warszawa</p>
+
+<p>
+Masz pytania o nasze luksusowe klocki mięsne?
+Skontaktuj się z nami — chętnie pomożemy.
+</p>
+
+</div>
+
+</section>
+
+
 <footer>
-© 2026 Aurea Cervus – Ekskluzywna sarnina klasy premium
+© 2026 Aurea Bricks – Luksusowe klocki inspirowane mięsem
 </footer>
 
 </body>
