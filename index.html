@@ -3,58 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurea Piano – Konfigurator</title>
+<title>Aurea Piano – Luksusowe Fortepiany</title>
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+}
+
+body{
 background:#0f0f0f;
-color:white;
-font-family:Georgia,serif;
+color:#eee;
 }
 
 header{
-padding:30px;
-background:black;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:35px 10%;
 border-bottom:1px solid #333;
+background:#000;
 }
 
 .logo{
+font-size:28px;
+letter-spacing:3px;
 color:#d4af37;
-font-size:26px;
+}
+
+nav a{
+color:#ccc;
+text-decoration:none;
+margin-left:25px;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.hero{
+height:70vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url("https://images.unsplash.com/photo-1520523839897-bd0b52f945a0");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:55px;
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:650px;
+font-size:20px;
 }
 
 section{
-padding:60px 10%;
+padding:90px 10%;
 }
 
-.config{
+.section-title{
+text-align:center;
+font-size:36px;
+color:#d4af37;
+margin-bottom:60px;
+}
+
+.products{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:50px;
 }
 
-#viewer{
-width:100%;
-height:500px;
-background:#111;
+.card{
+background:#141414;
+padding:25px;
 border:1px solid #333;
+text-align:center;
+transition:0.3s;
 }
 
-select{
+.card:hover{
+transform:translateY(-8px);
+border-color:#d4af37;
+}
+
+.card img{
 width:100%;
-padding:8px;
-margin-top:10px;
-background:#111;
-color:white;
-border:1px solid #444;
+margin-bottom:15px;
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:10px;
 }
 
 .price{
-font-size:26px;
-margin-top:30px;
-color:#d4af37;
+font-size:20px;
+margin-bottom:15px;
+}
+
+.color-picker{
+margin-top:10px;
+}
+
+.color-picker button{
+width:22px;
+height:22px;
+border-radius:50%;
+border:none;
+margin:4px;
+cursor:pointer;
+}
+
+.contact{
+text-align:center;
+max-width:700px;
+margin:auto;
+}
+
+.contact p{
+margin:8px 0;
+font-size:18px;
+}
+
+footer{
+margin-top:80px;
+background:#000;
+padding:40px;
+text-align:center;
+color:#777;
+border-top:1px solid #333;
 }
 
 </style>
@@ -63,188 +153,161 @@ color:#d4af37;
 <body>
 
 <header>
+
 <div class="logo">AUREA PIANO</div>
+
+<nav>
+<a href="#">Strona główna</a>
+<a href="#">Fortepiany</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
 </header>
+
+
+<section class="hero">
+
+<h1>Luksusowe Fortepiany</h1>
+<p>
+Ekskluzywne instrumenty dla najbardziej wymagających pianistów.
+Wybierz kolor idealnie pasujący do Twojego wnętrza.
+</p>
+
+</section>
+
 
 <section>
 
-<h1>Konfigurator fortepianu</h1>
+<h2 class="section-title">Nasze fortepiany</h2>
 
-<div class="config">
+<div class="products">
 
-<div id="viewer"></div>
 
-<div>
+<div class="card">
 
-<label>Kolor fortepianu</label>
-<select id="color">
-<option value="black">Czarny</option>
-<option value="white">Biały</option>
-<option value="red">Czerwony</option>
-<option value="blue">Niebieski</option>
-</select>
+<img id="piano1" src="https://images.unsplash.com/photo-1507838153414-b4b713384a76">
 
-<label>Wykończenie</label>
-<select id="finish">
-<option value="gloss">Połysk</option>
-<option value="matte">Mat</option>
-</select>
+<h3>Fortepian Royal</h3>
 
-<label>Kolor nóg</label>
-<select id="legs">
-<option value="black">Czarne</option>
-<option value="gold">Złote</option>
-<option value="silver">Srebrne</option>
-</select>
+<div class="price">89 000 zł</div>
 
-<div class="price" id="price">Cena: 80 000 zł</div>
+<p>Klasyczny koncertowy fortepian premium.</p>
+
+<div class="color-picker">
+Zmień kolor:<br>
+
+<button style="background:black"
+onclick="changeColor('piano1','grayscale(0)')"></button>
+
+<button style="background:red"
+onclick="changeColor('piano1','sepia(1) saturate(6) hue-rotate(-20deg)')"></button>
+
+<button style="background:blue"
+onclick="changeColor('piano1','sepia(1) saturate(5) hue-rotate(180deg)')"></button>
+
+<button style="background:white"
+onclick="changeColor('piano1','brightness(1.8)')"></button>
 
 </div>
+
+</div>
+
+
+<div class="card">
+
+<img id="piano2" src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf">
+
+<h3>Fortepian Imperial</h3>
+
+<div class="price">112 000 zł</div>
+
+<p>Instrument koncertowy dla sal filharmonicznych.</p>
+
+<div class="color-picker">
+Zmień kolor:<br>
+
+<button style="background:black"
+onclick="changeColor('piano2','grayscale(0)')"></button>
+
+<button style="background:red"
+onclick="changeColor('piano2','sepia(1) saturate(6) hue-rotate(-20deg)')"></button>
+
+<button style="background:blue"
+onclick="changeColor('piano2','sepia(1) saturate(5) hue-rotate(180deg)')"></button>
+
+<button style="background:white"
+onclick="changeColor('piano2','brightness(1.8)')"></button>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img id="piano3" src="https://images.unsplash.com/photo-1543062094-d22540b9ae0b">
+
+<h3>Fortepian Studio</h3>
+
+<div class="price">54 000 zł</div>
+
+<p>Kompaktowy fortepian do domowego studia.</p>
+
+<div class="color-picker">
+Zmień kolor:<br>
+
+<button style="background:black"
+onclick="changeColor('piano3','grayscale(0)')"></button>
+
+<button style="background:red"
+onclick="changeColor('piano3','sepia(1) saturate(6) hue-rotate(-20deg)')"></button>
+
+<button style="background:blue"
+onclick="changeColor('piano3','sepia(1) saturate(5) hue-rotate(180deg)')"></button>
+
+<button style="background:white"
+onclick="changeColor('piano3','brightness(1.8)')"></button>
+
+</div>
+
+</div>
+
 
 </div>
 
 </section>
 
-<script type="module">
 
-import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
-import { OrbitControls } from "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js";
+<section id="kontakt">
 
-const container = document.getElementById("viewer")
+<h2 class="section-title">Kontakt</h2>
 
-const scene = new THREE.Scene()
-scene.background = new THREE.Color(0x111111)
+<div class="contact">
 
-const camera = new THREE.PerspectiveCamera(
-60,
-container.clientWidth / container.clientHeight,
-0.1,
-1000
-)
+<p>📧 kontakt@aureapiano.pl</p>
+<p>📞 +48 123 456 789</p>
+<p>📍 ul. Muzyczna 12, Warszawa</p>
 
-camera.position.set(6,4,6)
+<p>
+Skontaktuj się z nami, aby zamówić fortepian w idealnym kolorze
+dla Twojego domu lub sali koncertowej.
+</p>
 
-const renderer = new THREE.WebGLRenderer({antialias:true})
-renderer.setSize(container.clientWidth,container.clientHeight)
-container.appendChild(renderer.domElement)
+</div>
 
-const controls = new OrbitControls(camera,renderer.domElement)
-controls.enableDamping=true
+</section>
 
-/* światło */
 
-const light = new THREE.DirectionalLight(0xffffff,1)
-light.position.set(5,10,5)
-scene.add(light)
+<footer>
+© 2026 Aurea Piano – Luksusowe fortepiany
+</footer>
 
-scene.add(new THREE.AmbientLight(0xffffff,0.5))
 
-/* materiały */
+<script>
 
-const bodyMaterial = new THREE.MeshStandardMaterial({
-color:0x000000,
-roughness:0.2
-})
-
-const legMaterial = new THREE.MeshStandardMaterial({
-color:0x000000
-})
-
-/* fortepian */
-
-const body = new THREE.Mesh(
-new THREE.BoxGeometry(4,1,3),
-bodyMaterial
-)
-
-scene.add(body)
-
-const lid = new THREE.Mesh(
-new THREE.BoxGeometry(4,0.2,3),
-bodyMaterial
-)
-
-lid.position.y=0.6
-scene.add(lid)
-
-/* nogi */
-
-function createLeg(x,z){
-
-const leg = new THREE.Mesh(
-new THREE.CylinderGeometry(0.15,0.15,2),
-legMaterial
-)
-
-leg.position.set(x,-1,z)
-scene.add(leg)
-
+function changeColor(id,filter){
+document.getElementById(id).style.filter=filter;
 }
-
-createLeg(1.8,1.2)
-createLeg(-1.8,1.2)
-createLeg(1.8,-1.2)
-createLeg(-1.8,-1.2)
-
-/* konfigurator */
-
-function update(){
-
-let price = 80000
-
-const color = document.getElementById("color").value
-const finish = document.getElementById("finish").value
-const legs = document.getElementById("legs").value
-
-const colors={
-black:0x000000,
-white:0xffffff,
-red:0xaa0000,
-blue:0x0033aa
-}
-
-bodyMaterial.color.setHex(colors[color])
-
-if(finish==="matte"){
-bodyMaterial.roughness=0.8
-}else{
-bodyMaterial.roughness=0.2
-price+=3000
-}
-
-const legColors={
-black:0x000000,
-gold:0xd4af37,
-silver:0xcccccc
-}
-
-legMaterial.color.setHex(legColors[legs])
-
-if(legs==="gold") price+=5000
-if(legs==="silver") price+=2000
-
-document.getElementById("price").innerText =
-"Cena: "+price.toLocaleString()+" zł"
-
-}
-
-document.getElementById("color").onchange=update
-document.getElementById("finish").onchange=update
-document.getElementById("legs").onchange=update
-
-/* animacja */
-
-function animate(){
-
-requestAnimationFrame(animate)
-
-controls.update()
-
-renderer.render(scene,camera)
-
-}
-
-animate()
 
 </script>
 
