@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurea Bricks – Luksusowe klocki w kształcie mięsa</title>
+<title>Aurea Piano – Luksusowe Fortepiany</title>
 
 <style>
 
@@ -16,16 +16,16 @@ font-family:Georgia, serif;
 
 body{
 background:#0f0f0f;
-color:#eaeaea;
+color:#eee;
 }
 
 header{
-background:linear-gradient(180deg,#000,#111);
-padding:40px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:35px 10%;
 border-bottom:1px solid #333;
+background:#000;
 }
 
 .logo{
@@ -37,8 +37,7 @@ color:#d4af37;
 nav a{
 color:#ccc;
 text-decoration:none;
-margin-left:30px;
-transition:0.3s;
+margin-left:25px;
 }
 
 nav a:hover{
@@ -46,7 +45,7 @@ color:#d4af37;
 }
 
 .hero{
-height:80vh;
+height:70vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -54,40 +53,24 @@ align-items:center;
 text-align:center;
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url("https://images.unsplash.com/photo-1608889175123-8ee362201f81");
+url("https://images.unsplash.com/photo-1520523839897-bd0b52f945a0");
 background-size:cover;
 background-position:center;
 }
 
 .hero h1{
-font-size:60px;
+font-size:55px;
 color:#d4af37;
 margin-bottom:20px;
 }
 
 .hero p{
-max-width:700px;
+max-width:650px;
 font-size:20px;
-color:#ddd;
-}
-
-.btn{
-margin-top:30px;
-padding:14px 40px;
-border:1px solid #d4af37;
-color:#d4af37;
-text-decoration:none;
-letter-spacing:2px;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#d4af37;
-color:#000;
 }
 
 section{
-padding:100px 10%;
+padding:90px 10%;
 }
 
 .section-title{
@@ -99,14 +82,15 @@ margin-bottom:60px;
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:50px;
 }
 
 .card{
 background:#141414;
-padding:30px;
-border:1px solid #2b2b2b;
+padding:25px;
+border:1px solid #333;
+text-align:center;
 transition:0.3s;
 }
 
@@ -122,23 +106,25 @@ margin-bottom:15px;
 
 .card h3{
 color:#d4af37;
+margin-bottom:10px;
 }
 
 .price{
-margin-top:10px;
 font-size:20px;
+margin-bottom:15px;
 }
 
-.showcase{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
+.color-picker{
+margin-top:10px;
 }
 
-.showcase img{
-width:100%;
-border:1px solid #333;
+.color-picker button{
+width:22px;
+height:22px;
+border-radius:50%;
+border:none;
+margin:4px;
+cursor:pointer;
 }
 
 .contact{
@@ -148,28 +134,17 @@ margin:auto;
 }
 
 .contact p{
-margin:10px 0;
+margin:8px 0;
 font-size:18px;
 }
 
 footer{
+margin-top:80px;
 background:#000;
 padding:40px;
 text-align:center;
 color:#777;
 border-top:1px solid #333;
-}
-
-@media(max-width:900px){
-
-.showcase{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:42px;
-}
-
 }
 
 </style>
@@ -179,12 +154,11 @@ font-size:42px;
 
 <header>
 
-<div class="logo">AUREA BRICKS</div>
+<div class="logo">AUREA PIANO</div>
 
 <nav>
 <a href="#">Strona główna</a>
-<a href="#">Produkty</a>
-<a href="#">O nas</a>
+<a href="#">Fortepiany</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
 
@@ -193,68 +167,111 @@ font-size:42px;
 
 <section class="hero">
 
-<h1>Luksusowe klocki w kształcie mięsa</h1>
-
+<h1>Luksusowe Fortepiany</h1>
 <p>
-Ekskluzywna kolekcja klocków inspirowanych najbardziej wyrafinowanymi
-kawałkami mięsa. Idealne dla kolekcjonerów, artystów i ludzi
-z bardzo specyficznym poczuciem humoru.
+Ekskluzywne instrumenty dla najbardziej wymagających pianistów.
+Wybierz kolor idealnie pasujący do Twojego wnętrza.
 </p>
-
-<a class="btn">Zobacz kolekcję</a>
 
 </section>
 
 
 <section>
 
-<h2 class="section-title">Nasze produkty</h2>
+<h2 class="section-title">Nasze fortepiany</h2>
 
 <div class="products">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1">
-<h3>Klocek Polędwica</h3>
-<p>Precyzyjny klocek inspirowany luksusową polędwicą.</p>
-<div class="price">349 zł</div>
-</div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
-<h3>Klocek Stek</h3>
-<p>Ultrapremium element kolekcjonerski.</p>
-<div class="price">399 zł</div>
+
+<img id="piano1" src="https://images.unsplash.com/photo-1507838153414-b4b713384a76">
+
+<h3>Fortepian Royal</h3>
+
+<div class="price">89 000 zł</div>
+
+<p>Klasyczny koncertowy fortepian premium.</p>
+
+<div class="color-picker">
+Zmień kolor:<br>
+
+<button style="background:black"
+onclick="changeColor('piano1','grayscale(0)')"></button>
+
+<button style="background:red"
+onclick="changeColor('piano1','sepia(1) saturate(6) hue-rotate(-20deg)')"></button>
+
+<button style="background:blue"
+onclick="changeColor('piano1','sepia(1) saturate(5) hue-rotate(180deg)')"></button>
+
+<button style="background:white"
+onclick="changeColor('piano1','brightness(1.8)')"></button>
+
 </div>
+
+</div>
+
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141">
-<h3>Klocek Filet</h3>
-<p>Minimalistyczny design i perfekcyjne dopasowanie.</p>
-<div class="price">429 zł</div>
+
+<img id="piano2" src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf">
+
+<h3>Fortepian Imperial</h3>
+
+<div class="price">112 000 zł</div>
+
+<p>Instrument koncertowy dla sal filharmonicznych.</p>
+
+<div class="color-picker">
+Zmień kolor:<br>
+
+<button style="background:black"
+onclick="changeColor('piano2','grayscale(0)')"></button>
+
+<button style="background:red"
+onclick="changeColor('piano2','sepia(1) saturate(6) hue-rotate(-20deg)')"></button>
+
+<button style="background:blue"
+onclick="changeColor('piano2','sepia(1) saturate(5) hue-rotate(180deg)')"></button>
+
+<button style="background:white"
+onclick="changeColor('piano2','brightness(1.8)')"></button>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img id="piano3" src="https://images.unsplash.com/photo-1543062094-d22540b9ae0b">
+
+<h3>Fortepian Studio</h3>
+
+<div class="price">54 000 zł</div>
+
+<p>Kompaktowy fortepian do domowego studia.</p>
+
+<div class="color-picker">
+Zmień kolor:<br>
+
+<button style="background:black"
+onclick="changeColor('piano3','grayscale(0)')"></button>
+
+<button style="background:red"
+onclick="changeColor('piano3','sepia(1) saturate(6) hue-rotate(-20deg)')"></button>
+
+<button style="background:blue"
+onclick="changeColor('piano3','sepia(1) saturate(5) hue-rotate(180deg)')"></button>
+
+<button style="background:white"
+onclick="changeColor('piano3','brightness(1.8)')"></button>
+
 </div>
 
 </div>
 
-</section>
-
-
-<section>
-
-<h2 class="section-title">Zadowoleni klienci</h2>
-
-<div class="showcase">
-
-<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
-
-<p>
-Nasze klocki zdobyły serca kolekcjonerów na całym świecie.
-Na zdjęciu jeden z naszych klientów prezentuje
-limitowany klocek „Stek Imperium”.
-
-Produkty Aurea Bricks łączą luksus, humor i perfekcyjne wykonanie.
-Każdy element jest zaprojektowany tak, aby wyglądał jak
-najbardziej ekskluzywny kawałek mięsa… ale był w rzeczywistości klockiem.
-</p>
 
 </div>
 
@@ -267,13 +284,13 @@ najbardziej ekskluzywny kawałek mięsa… ale był w rzeczywistości klockiem.
 
 <div class="contact">
 
-<p>📧 Email: kontakt@aureabricks.pl</p>
-<p>📞 Telefon: +48 123 456 789</p>
-<p>📍 Adres: ul. Klockowa 7, 00-001 Warszawa</p>
+<p>📧 kontakt@aureapiano.pl</p>
+<p>📞 +48 123 456 789</p>
+<p>📍 ul. Muzyczna 12, Warszawa</p>
 
 <p>
-Masz pytania o nasze luksusowe klocki mięsne?
-Skontaktuj się z nami — chętnie pomożemy.
+Skontaktuj się z nami, aby zamówić fortepian w idealnym kolorze
+dla Twojego domu lub sali koncertowej.
 </p>
 
 </div>
@@ -282,8 +299,19 @@ Skontaktuj się z nami — chętnie pomożemy.
 
 
 <footer>
-© 2026 Aurea Bricks – Luksusowe klocki inspirowane mięsem
+© 2026 Aurea Piano – Luksusowe fortepiany
 </footer>
 
+
+<script>
+
+function changeColor(id,filter){
+document.getElementById(id).style.filter=filter;
+}
+
+</script>
+
+</body>
+</html>
 </body>
 </html>
